@@ -161,6 +161,12 @@ function moveBird(e) {
 
 function moveBirdTouch(e) {
     velocityY = -6;
+    if (gameOver) {
+            bird.y =birdY;
+            pipeArray = [];
+            score = 0;
+            gameOver = false;
+        }
 }
 
 function detectCollision(a,b) {
